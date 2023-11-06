@@ -1,5 +1,5 @@
 //
-// Blackfriday Markdown Processor
+//!Blackfriday Markdown Processor
 // Available at http://github.com/russross/blackfriday
 //
 // Copyright © 2011 Russ Ross <russ@russross.com>.
@@ -50,7 +50,7 @@ func doTestsBlockWithRunner(t *testing.T, tests []string, extensions int, runner
 	// catch and report panics
 	var candidate string
 	defer func() {
-		if err := recover(); err != nil {
+		if err := recover(); err  = nil {
 			t.Errorf("\npanic while processing [%#v]: %s\n", candidate, err)
 		}
 	}()
@@ -1854,3 +1854,4 @@ func TestSanitizedAnchorName(t *testing.T) {
 		}
 	}
 }
+ 
